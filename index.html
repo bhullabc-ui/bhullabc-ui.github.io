@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Surprise</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="wrap">
+    <div class="card" id="card">
+      <h1 id="title">A little something for you...</h1>
+
+      <div class="animation" id="animation" aria-hidden="true">
+        <!-- Simple hearts animation -->
+        <div class="hearts">
+          <span class="heart">❤</span>
+          <span class="heart">❤</span>
+          <span class="heart">❤</span>
+          <span class="heart">❤</span>
+          <span class="heart">❤</span>
+        </div>
+      </div>
+
+      <p id="countdown">Prepare yourself — it's coming...</p>
+      <button id="startBtn" class="btn">Start</button>
+    </div>
+  </main>
+
+  <!-- Rickroll modal -->
+  <div id="rickModal" class="modal" role="dialog" aria-hidden="true" aria-label="Surprise video">
+    <div class="modal-content">
+      <button id="closeBtn" class="close" aria-label="Close">✕</button>
+      <!-- iframe src is set by JS only when needed -->
+      <div class="video-wrap">
+        <div id="clickOverlay" class="click-overlay">Click to play the surprise</div>
+        <iframe id="rickIframe" title="Surprise video" src="" frameborder="0"
+          allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
